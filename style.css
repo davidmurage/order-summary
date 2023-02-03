@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html,body{
+    font-family: 'Red Hat Display', sans-serif;
+    height: 100%;
+}
+
+body{
+    background-color:  hsl(225, 100%, 94%) ;
+    background-image: url(images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 70%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.summarycontainer{
+    width: 450px;
+    background-color: #fff;
+    border-radius: 1rem;
+    color:  hsl(223, 47%, 23%);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.title{
+    padding: 2rem 1rem 0;
+    font-weight: 900;
+}
+
+.description{
+    color: hsl(224, 23%, 55%) ;
+    padding-bottom: 1rem;
+    font-size: 16px;
+}
+
+.hero{
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    
+}
+
+.plancontainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: hsl(225, 100%, 94%);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+}
+
+.plan{
+    display: flex;
+}
+
+.planinfo{
+    padding-left: 1rem;
+    align-items: center;
+}
+
+.btn{
+    font-size: 1rem;
+    outline: none;
+    background: none;
+    padding: 1rem 1.5rem;
+    border-radius: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+}
+
+.ChangeBtn{
+    color: hsl(223, 47%, 23%);
+}
+
+.proceedBtn{
+    background-color: hsl(223, 47%, 23%);
+    color: #fff;
+}
+
+.cancelBtn{
+    margin-bottom: 1rem;
+    color:  hsl(224, 23%, 55%);
+}
+
+@media only Screen and(max-width:466px){
+    body{
+        background-image: url(images/pattern-background-mobile.svg);
+        font-size: 14px;
+    }
+    .container{
+        max-width: 87%;
+
+    }
+
+    .title{
+        font-size: 14px;
+    }
+}
