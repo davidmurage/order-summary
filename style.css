@@ -1,110 +1,155 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-html,body{
-    font-family: 'Red Hat Display', sans-serif;
-    height: 100%;
-}
+
 
 body{
+    font-family: 'Red Hat Display', sans-serif;
     background-color:  hsl(225, 100%, 94%) ;
     background-image: url(images/pattern-background-desktop.svg);
     background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    background-size: contain;
+    position: relative;
+    min-height: 100vh;
 }
 
 .container{
-    width: 70%;
-    text-align: center;
-    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    max-width: 450px;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    overflow: hidden;
+    background: white;
 }
 
-.summarycontainer{
-    width: 450px;
-    background-color: #fff;
-    border-radius: 1rem;
-    color:  hsl(223, 47%, 23%);
+.text-content{
+    padding: 7%;
     text-align: center;
-    margin-bottom: 1rem;
 }
+
 
 .title{
-    padding: 2rem 1rem 0;
+    color: hsl(223, 47%, 23%);
+    font-size: 32px;
     font-weight: 900;
+    margin-bottom: 20px;
 }
 
-.description{
-    color: hsl(224, 23%, 55%) ;
-    padding-bottom: 1rem;
-    font-size: 16px;
+.text-content p.description{
+    color: #8a8a8a ;
+    margin-bottom: 25px;
 }
 
-.hero{
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
-    
-}
 
-.plancontainer{
+
+.plan-box{
     display: flex;
+    background-color:  hsl(225, 100%, 98%);
+    border-radius: 12px;
+    padding: 15px;
     align-items: center;
     justify-content: space-between;
-    background-color: hsl(225, 100%, 94%);
-    padding: 1rem;
-    border-radius: 1rem;
-    margin-bottom: 2rem;
 }
 
-.plan{
+.plan-box-left{
     display: flex;
-}
-
-.planinfo{
-    padding-left: 1rem;
     align-items: center;
+    text-align: left;
+
 }
 
-.btn{
-    font-size: 1rem;
-    outline: none;
-    background: none;
-    padding: 1rem 1.5rem;
-    border-radius: 1rem;
-    font-weight: 700;
-    cursor: pointer;
-    border: none;
+.plan-box-left div{
+    margin-left: 20px;
 }
+
+.plan-box-left div h2{
+    font-weight: 900;
+    font-size: 14px;
+    color: hsl(223, 47%, 23%);
+}
+
+.plan-box-left div p{
+    
+    font-size: 14px;
+    color: #8a8a8a;
+}
+
+.plan-box a{
+    font-weight: 900;
+    color: hsl(223, 47%, 23%);
+    transition: color .3s ease;
+}
+
+.plan-box a:hover{
+    text-decoration: none;
+    color: hsl(245, 75%, 52%);
+}
+
+
 
 .ChangeBtn{
     color: hsl(223, 47%, 23%);
 }
 
-.proceedBtn{
-    background-color: hsl(223, 47%, 23%);
+a.proceed-btn{
+    display: block;
+    background-color: hsl(245, 75%, 52%);
     color: #fff;
+    padding: 20px 0;
+    border-radius: 12px;
+    text-decoration: none;
+    margin: 30px 0;
+    text-align: center;
+    transition: background-color .3s ease;
 }
 
-.cancelBtn{
-    margin-bottom: 1rem;
+a.proceed-btn:hover{
     color:  hsl(224, 23%, 55%);
 }
 
-@media only Screen and(max-width:466px){
+
+a.cancel-btn{
+    color:  hsl(224, 23%, 55%);
+    font-weight: 900;
+    text-decoration: none;
+    align-items: center;
+}
+
+a.cancel-btn:hover{
+    color: hsl(223, 47%, 23%);
+}
+
+
+
+@media only Screen and (max-width: 425px){
     body{
         background-image: url(images/pattern-background-mobile.svg);
         font-size: 14px;
     }
+
     .container{
         max-width: 87%;
 
     }
 
     .title{
-        font-size: 14px;
+        font-size: 23px;
+    }
+
+    div.plan-box{
+        padding: 12px;
+    }
+
+    a.proceed-btn, a.cancel-btn, .plan-box a{
+        font-size: 13px;
+    }
+
+    .text-content{
+        padding: 9% 7%;
     }
 }
